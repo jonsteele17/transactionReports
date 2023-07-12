@@ -97,7 +97,7 @@ pool.getConnection((err, connection) => {
     if (err) throw err; // not connected!
     let i = 0;
     for (const record of records) {
-        let sql = "INSERT INTO qstock_shipped_order SET ?";
+        let sql = "INSERT INTO transactionReports SET ?";
         let values = record;
         try {
             // Use the connection
