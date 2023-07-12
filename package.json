@@ -1,0 +1,59 @@
+{
+    "name": "qstock-import",
+    "version": "1.0.0",
+    "description": "",
+    "homepage": "https://github.com/mrcool-com/qstock-import#readme",
+    "bugs": {
+        "url": "https://github.com/mrcool-com/qstock-import/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mrcool-com/qstock-import.git"
+    },
+    "license": "ISC",
+    "author": "",
+    "type": "module",
+    "main": "import.js",
+    "scripts": {
+        "format": "prettier --write .",
+        "lint:js": "eslint",
+        "lint:pkg-json": "npmPkgJsonLint .",
+        "prepare": "husky install"
+    },
+    "lint-staged": {
+        "*": "prettier --ignore-unknown --write"
+    },
+    "eslintConfig": {
+        "env": {
+            "node": true
+        },
+        "extends": [
+            "eslint:recommended",
+            "plugin:import/recommended",
+            "prettier"
+        ]
+    },
+    "npmpackagejsonlint": {
+        "extends": "npm-package-json-lint-config-default"
+    },
+    "dependencies": {
+        "mysql": "^2.18.1",
+        "xlsx": "^0.18.5"
+    },
+    "devDependencies": {
+        "eslint": "^8.30.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.26.0",
+        "husky": "^8.0.2",
+        "lint-staged": "^13.1.0",
+        "npm-package-json-lint": "^6.4.0",
+        "npm-package-json-lint-config-default": "^5.0.0",
+        "package-changed": "^2.0.0",
+        "prettier": "^2.8.1",
+        "prettier-plugin-packagejson": "^2.3.0"
+    },
+    "engines": {
+        "node": "18.x",
+        "npm": "9.x"
+    }
+}
