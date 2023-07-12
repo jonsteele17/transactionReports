@@ -1,7 +1,7 @@
 import { createPool } from "mysql";
 import XLSX from "xlsx";
 
-const filename = "shippedOrders.xls"; // 'shippedOrders.xlsx' is in the same folder as this file
+const filename = "raw.xls"; // 'shippedOrders.xlsx' is in the same folder as this file
 const expectedSheetName = "Sheet1"; // The name of the sheet in the excel file
 const headerRow = 2; // The row number of the header row in the excel file
 
@@ -85,11 +85,12 @@ for (let i = 0; i < dimensions[4]; i++) {
 
 const pool = createPool({
     connectionLimit: 10,
-    host: "172.105.148.239", // .com
+    hots: "45.79.203.190", // .xyz
+    // host: "172.105.148.239", // .com
     //host: "45.79.1.249", // .work
-    user: "migration_x",
-    password: "dump$73R_f!r3_7@$K_f0rc3",
-    database: "mrc001_warranty",
+    user: "steele",
+    password: "r4ZIDm/Cn]YOwnxS",
+    database: "ga-datadb",
 });
 
 pool.getConnection((err, connection) => {
