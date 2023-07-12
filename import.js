@@ -90,7 +90,7 @@ const pool = createPool({
     //host: "45.79.1.249", // .work
     user: "steele",
     password: "r4ZIDm/Cn]YOwnxS",
-    database: "ga-datadb",
+    database: "jonathans_database",
 });
 
 pool.getConnection((err, connection) => {
