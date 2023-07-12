@@ -1,7 +1,7 @@
 import { createPool } from "mysql";
 import XLSX from "xlsx";
 
-const filename = "raw.xls"; // 'shippedOrders.xlsx' is in the same folder as this file
+const filename = "raw.xls"; // 'raw.xls' has one page // 'raw2.xls' has multiple pages
 const expectedSheetName = "Sheet1"; // The name of the sheet in the excel file
 const headerRow = 2; // The row number of the header row in the excel file
 
