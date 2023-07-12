@@ -85,8 +85,8 @@ for (let i = 0; i < dimensions[4]; i++) {
 
 const pool = createPool({
     connectionLimit: 10,
-    hots: "45.79.203.190", // .xyz
-    // host: "172.105.148.239", // .com
+    host: "45.79.203.190", // .xyz
+    //host: "172.105.148.239", // .com
     //host: "45.79.1.249", // .work
     user: "steele",
     password: "r4ZIDm/Cn]YOwnxS",
