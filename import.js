@@ -1,7 +1,7 @@
-import { createPool } from "mysql";
-import XLSX from "xlsx";
+import { createPool } from "mysql"; // library (package) npmjs.org
+import XLSX from "xlsx"; // library (package) npmjs.org
 
-const filename = "raw.xls"; // 'raw.xls' has one page // 'raw2.xls' has multiple pages
+const filename = "";
 const expectedSheetName = "Sheet1"; // The name of the sheet in the excel file
 const headerRow = 2; // The row number of the header row in the excel file
 
@@ -10,7 +10,7 @@ const workbook = XLSX.readFile(filename, {
     sheets: expectedSheetName,
 });
 const Sheet1 = workbook.Sheets[expectedSheetName];
-const dimensions = Sheet1["!ref"].match(/([A-Z]+)([0-9]+):([A-Z]+)([0-9]+)/);
+const dimensions = Sheet1["!ref"].match(/([A-Z]+)([0-9]+):([A-Z]+)([0-9]+)/); // backend excel functionality (weird)
 
 function alphaToNum(alpha) {
     var i = 0,
